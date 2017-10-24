@@ -36,7 +36,7 @@ module.exports = function(grunt){
 			coverage: {
 				src: 'test',
 				options: {
-					mask: '*[sS]pec.js'
+					mask: '**/*[sS]pec.js'
 				}
 			}
 		},

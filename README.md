@@ -99,6 +99,8 @@ Command modules implement the following:
 * Unit testing `npm run test`
 * Code Coverage `npm run codeCoverage`
 
+Output for coverage is in the `coverage/lcov-report/index.html` file. Just open in your browser or expose in your CI.
+
 # Continuing the conversation
 
 For more information, please see the following:
