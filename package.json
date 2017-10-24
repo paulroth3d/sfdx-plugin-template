@@ -1,0 +1,53 @@
+{
+  "name": "sfdx-plugin-template",
+  "version": "0.1.0",
+  "description": "Salesforce DX Plugin Template Project",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib",
+    "test": "test"
+  },
+  "scripts": {
+    "lint": "node node_modules/grunt/bin/grunt default",
+    "lintCommands": "node node_modules/grunt/bin/grunt lintCommands",
+    "test": "node node_modules/grunt/bin/grunt test",
+    "watchCommands": "node node_modules/grunt/bin/grunt watchCommands",
+    "watchTests": "node node_modules/grunt/bin/grunt watchTests",
+    "coverage": "node node_modules/grunt/bin/grunt coverage"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/paulroth3d/sfdx-plugin-template.git"
+  },
+  "keywords": [
+    "sfdx",
+    "plugin",
+    "template"
+  ],
+  "author": "Paul Roth",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/paulroth3d/sfdx-plugin-template/issues"
+  },
+  "homepage": "https://github.com/paulroth3d/sfdx-plugin-template#readme",
+  "devDependencies": {
+    "chai": "4.1.2",
+    "eslint": "4.9.0",
+    "grunt": "1.0.1",
+    "grunt-contrib-watch": "1.0.0",
+    "grunt-mocha-istanbul": "5.0.2",
+    "grunt-mocha-test": "0.13.3",
+    "gruntify-eslint": "4.0.0",
+    "istanbul": "0.4.5",
+    "mocha": "4.0.1",
+    "sinon": "4.0.1"
+  },
+  "dependencies": {
+    "child_process": "1.0.2",
+    "fs-extra": "4.0.2",
+    "jsforce": "1.8.0",
+    "prompt": "1.0.0",
+    "q": "1.5.1",
+    "underscore": "1.8.3"
+  }
+}
