@@ -4,9 +4,9 @@ A template for making Salesforce DX Plugins
 
 # Steps to make your plugin
 
-1. Install the SDFX CLI.
+1. Install the [SDFX CLI](https://developer.salesforce.com/tools/sfdxcli)
 
-2. Fork and Clone this repository: `git clone git@github.com:paulroth3d/sfdx-plugin-template.git`
+2. Fork and Clone this repository: [i.e https://github.com/paulroth3d/sfdx-plugin-template](https://github.com/paulroth3d/sfdx-plugin-template)
 
 3. Install npm modules: `npm install`
 
