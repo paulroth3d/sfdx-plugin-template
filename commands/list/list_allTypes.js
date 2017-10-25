@@ -108,6 +108,7 @@ function cleanContext(config){
 
           //-- get all metadata types based on the active access token.
           return (JsForceUtil.getAllTypes(dxConnection));
+          //return JsForceUtil.getTypeMembers(dxConnection,'ApexTrigger');
         })
         .then(function(allTypesResults){
           //console.log('all metadata types found:' + allTypesResults.length);

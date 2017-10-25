@@ -13,7 +13,8 @@
     "test": "node node_modules/grunt/bin/grunt test",
     "watchCommands": "node node_modules/grunt/bin/grunt watchCommands",
     "watchTests": "node node_modules/grunt/bin/grunt watchTests",
-    "coverage": "node node_modules/grunt/bin/grunt coverage"
+    "coverage": "node node_modules/grunt/bin/grunt coverage",
+    "debugTests": "node --inspect --inspect-brk node_modules/grunt/bin/grunt test"
   },
   "repository": {
     "type": "git",
@@ -33,6 +34,7 @@
   "devDependencies": {
     "chai": "4.1.2",
     "eslint": "4.9.0",
+    "fake-exec": "1.1.0",
     "grunt": "1.0.1",
     "grunt-contrib-watch": "1.0.0",
     "grunt-mocha-istanbul": "5.0.2",
