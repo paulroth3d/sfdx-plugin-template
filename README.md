@@ -17,6 +17,18 @@ A template for making Salesforce DX Plugins
 6. Publish the plugin to npm, so it is available directly to end users: <br /> `sfdx plugins:install [[your_npm_package_name]]`
 
 
+# Features available:
+
+* Code linting: `npm run lint`
+  * Lint just commands `npm run lintCommands`
+  * Lint Commands on save: `npm run watchCommands`
+  * Lint and run tests on save: `npm run watchTests`
+* Unit testing `npm run test`
+* Code Coverage `npm run codeCoverage`
+
+Output for coverage is in the `coverage/lcov-report/index.html` file. Just open in your browser or expose in your CI.
+
+
 # Developing your plugin
 
 There are three main parts to creating a plugin:
@@ -89,17 +101,6 @@ Command modules implement the following:
 	  	//-- but it is not required
 	  }
 	}
-
-# Features available:
-
-* Code linting: `npm run lint`
-  * Lint just commands `npm run lintCommands`
-  * Actively lint Commands on save: `npm run watchCommands`
-  * Actively lint and run tests on save: `npm run watchTests`
-* Unit testing `npm run test`
-* Code Coverage `npm run codeCoverage`
-
-Output for coverage is in the `coverage/lcov-report/index.html` file. Just open in your browser or expose in your CI.
 
 # Continuing the conversation
 
