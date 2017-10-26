@@ -105,42 +105,30 @@ Command modules implement the following:
 
 # Debugging Your Command
 
-With the Salesforce DX CLI involving executables, it can be difficult to get line by line debugging.
+With recent updates to Salesforce DX (specifically version 6.XX), debugging your commands is much easier to accomplish.
 
-This is made a bit more challenging, as the CLI provides Context information to the command to run.
+Simply pass in the `--dev-suspend` command line argument, and a debugger will be started.
 
-An easy alternative, it IS possible to create a separate file (say `localDebug.js`) that can call your code and pass in stubbed context.
-
-At the start of many commands (like the examples provided), there is a line commented out to echo out the context of the command. Simply store that JSON somewhere in your test class to run it.
-
-	/*jshint esversion: 6*/
-	
-	const targetPackageList = 'testAssets/packageLists/testPackageList.txt';
-	//-- paste the context from your command here
-	const context = {'apiHost':'api.heroku.com','apiToken':'', ...};
-	
-	const cmd = require('./commands/example/example_sayHello');
-	cmd.run(context);
-	
-You can then debug the command as normal within node.
-
-For example, running this command will open a local debugging instance:
-
-	>node --inspect --inspect-brk ./localDebug.js
-	Debugger listening on https://127.0.0.1:9229/77d4867c-8da6-4a74-850d-a61c679fb887
+	> sfdx template:example:sayHello --dev-suspend
+	Debugger listening on ws://127.0.0.1:9229/31da11bf-02d2-4dd6-81ac-3c30056b7a49
 	For help see https://nodejs.org/en/docs/inspector
+	Debugger attached.
+	
+This opens a websocket for debugging the app (the code is automatically paused before execution)
 
-Opening that page within your browser (Chrome for example, supports this), will allow you to line by line debug the code.
+Chrome provides built-in tools for connecting to the web-sockets for debugging with two options:
 
-![screenshot of chrome inspector running](docs/images/chromeInspectRunning.png)
-
---
-
-An alternative using chrome is to open [chrome://inspect](chrome://inspect)
+**Option 1**: The simplest way is to open the url `chrome://inspect` within chrome.
 
 Refreshing this page will show an active list of all debugger instances running, without constantly copy and pasting the random url.
 
 ![screenshot of chrome inspect](docs/images/chromeInspect.png)
+
+![screenshot of chrome inspector running](docs/images/chromeInspectRunning.png)
+
+**Option 2**: Alternatively, you can use the Chrome Extension NIM (Node Inspector Manager) <br /> [https://chrome.google.com/webstore/detail/nim-node-inspector-manage/gnhhdgbaldcilmgcpfddgdbkhjohddkj](https://chrome.google.com/webstore/detail/nim-node-inspector-manage/gnhhdgbaldcilmgcpfddgdbkhjohddkj)
+
+
 
 # Debugging Unit Tests
 
