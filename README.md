@@ -10,11 +10,13 @@ A template for making Salesforce DX Plugins
 
 3. Install npm modules: `npm install`
 
-4. Link the plugin, so it is available for local testing: `sfdx plugins:link .` <br /> (you should now see the plugin when you run `sfdx --help` or executing locally)
+4. Rename the plugin name/namespace within `package.json` and `package-lock.json` from `sfdx-plugin-template` to your plugin's name (all lower case)
 
-5. Develop your plugin (detail below)
+5. Link the plugin, so it is available for local testing: `sfdx plugins:link .` <br /> (you should now see the plugin when you run `sfdx --help` or executing locally)
 
-6. Publish the plugin to npm, so it is available directly to end users: <br /> `sfdx plugins:install [[your_npm_package_name]]`
+6. Develop your plugin (detail below)
+
+7. Publish the plugin to npm, so it is available directly to end users: <br /> `sfdx plugins:install [[your_npm_package_name]]`
 
 
 # Features available:
